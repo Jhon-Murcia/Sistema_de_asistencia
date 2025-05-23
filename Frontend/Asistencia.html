@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Gestión de Asistencia</title>
+    <link rel="stylesheet" href="CSS.css">
+</head>
+<body>
+<div class="container">
+    <h1>Sistema de Asistencia</h1>
+    <h2>Gestión de Asistencia</h2>
+
+    <section>
+        <h3>1. Registrar Asistencia</h3>
+        <form>
+            <label for="codigoEstudiante">Código del Estudiante:</label>
+            <input type="text" id="codigoEstudiante" placeholder="Ej. 2025001">
+
+            <label for="asignatura">Asignatura:</label>
+            <input type="text" id="asignatura" placeholder="Ej. Álgebra Lineal">
+
+            <label for="fecha">Fecha:</label>
+            <input type="date" id="fecha">
+
+            <label for="estado">Estado:</label>
+            <select id="estado">
+                <option value="Presente">Presente</option>
+                <option value="Ausente">Ausente</option>
+                <option value="Tarde">Tarde</option>
+                <option value="Justificado">Justificado</option>
+            </select>
+
+            <button type="button">Registrar</button>
+        </form>
+    </section>
+
+    <section>
+        <h3>2. Consultar Asistencia</h3>
+        <form>
+            <label for="codigoConsulta">Código del Estudiante:</label>
+            <input type="text" id="codigoConsulta" placeholder="Ej. 2025001">
+
+            <label for="asignaturaConsulta">Asignatura:</label>
+            <input type="text" id="asignaturaConsulta" placeholder="Ej. Álgebra Lineal">
+
+            <label for="fechaConsulta">Fecha:</label>
+            <input type="date" id="fechaConsulta">
+
+            <button type="button">Consultar</button>
+        </form>
+    </section>
+
+    <section>
+        <h3>3. Modificar Registro de Asistencia</h3>
+        <form>
+            <label for="codigoModificar">Código del Estudiante:</label>
+            <input type="text" id="codigoModificar" placeholder="Ej. 2025001">
+
+            <label for="fechaModificar">Fecha:</label>
+            <input type="date" id="fechaModificar">
+
+            <label for="nuevoEstado">Nuevo Estado:</label>
+            <select id="nuevoEstado">
+                <option value="Presente">Presente</option>
+                <option value="Ausente">Ausente</option>
+                <option value="Tarde">Tarde</option>
+                <option value="Justificado">Justificado</option>
+            </select>
+
+            <button type="button">Modificar</button>
+        </form>
+    </section>
+</div>
+</body>
+</html>

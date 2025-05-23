@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Gestión de Departamentos</title>
+    <link rel="stylesheet" href="CSS.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Gestión de Departamentos</h1>
+
+    <!-- Registrar Departamento -->
+    <section class="card">
+        <h2>Registrar Departamento</h2>
+        <form id="formRegistrarDepartamento">
+            <input type="text" id="nombreDepartamento" placeholder="Nombre del Departamento" required>
+            <input type="text" id="codigoDepartamento" placeholder="Código del Departamento" required>
+            <button type="submit">Registrar</button>
+        </form>
+    </section>
+
+    <!-- Consultar Departamento -->
+    <section class="card">
+        <h2>Consultar Departamento</h2>
+        <form id="formConsultarDepartamento">
+            <input type="text" id="codigoBuscar" placeholder="Código del Departamento" required>
+            <button type="submit">Consultar</button>
+        </form>
+        <div id="resultadoConsulta" class="resultado"></div>
+    </section>
+
+    <!-- Modificar Departamento -->
+    <section class="card">
+        <h2>Modificar Departamento</h2>
+        <form id="formModificarDepartamento">
+            <input type="text" id="codigoModificar" placeholder="Código del Departamento" required>
+            <input type="text" id="nuevoNombreDepartamento" placeholder="Nuevo nombre" required>
+            <button type="submit">Modificar</button>
+        </form>
+    </section>
+
+    <!-- Listar Departamentos -->
+    <section class="card">
+        <h2>Listar Departamentos</h2>
+        <button onclick="listarDepartamentos()">Listar</button>
+        <div id="listadoDepartamentos" class="resultado">
+            <!-- Aquí se va a mostrar la lista -->
+        </div>
+    </section>
+
+    <button class="btn-volver" onclick="window.location.href='index.html'">Volver al inicio</button>
+</div>
+
+<script src="Departamento.js"></script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Gestión de Estudiantes</title>
+    <link rel="stylesheet" href="CSS.css">
+</head>
+<body>
+<div class="container">
+    <h1>Gestión de Estudiantes</h1>
+
+    <!-- REGISTRAR ESTUDIANTE -->
+    <section class="card">
+        <h2>Registrar Estudiante</h2>
+        <form onsubmit="guardarEst(); return false;">
+            <input id="nombre" type="text" placeholder="Nombre completo" required>
+            <select id="tipoid" required>
+                <option value="">Tipo de documento</option>
+                <option value="CC">Cédula</option>
+                <option value="TI">Tarjeta de identidad</option>
+                <option value="CE">Cédula de extranjería</option>
+            </select>
+            <input id="numeroid" type="text" placeholder="Número de documento" required>
+            <button type="submit">Registrar</button>
+        </form>
+    </section>
+
+    <!-- CONSULTAR ESTUDIANTE -->
+    <section class="card">
+        <h2>Consultar Estudiante en Departamento</h2>
+        <form onsubmit="return false;">
+            <select id="consultatipoid" required>
+                <option value="">Tipo de documento</option>
+                <option value="CC">Cédula</option>
+                <option value="TI">Tarjeta de identidad</option>
+                <option value="CE">Cédula de extranjería</option>
+            </select>
+            <input id="consultanumeroid" type="text" placeholder="Número de documento" required>
+            <button type="submit">Consultar</button>
+        </form>
+        <div class="resultado">Nombre del estudiante: [Aquí se mostrará]</div>
+    </section>
+
+    <!-- MODIFICAR ESTUDIANTE -->
+    <section class="card">
+        <h2>Modificar Estudiante</h2>
+        <form onsubmit="modificarEst(); return false;">
+            <select id="tipoidactual" required>
+                <option value="">Tipo actual de documento</option>
+                <option value="CC">Cédula</option>
+                <option value="TI">Tarjeta de identidad</option>
+                <option value="CE">Cédula de extranjería</option>
+            </select>
+            <input id="numeroid1" type="text" placeholder="Número actual de documento" required>
+            <select id="nuevotipoid" required>
+                <option value="">Nuevo tipo de documento</option>
+                <option value="CC">Cédula</option>
+                <option value="TI">Tarjeta de identidad</option>
+                <option value="CE">Cédula de extranjería</option>
+            </select>
+            <input id="nuevoNombre" type="text" placeholder="Nuevo nombre completo" required>
+            <button type="submit">Modificar</button>
+        </form>
+    </section>
+
+    <!-- REGISTRAR EN ASIGNATURA -->
+    <section class="card">
+        <h2>Registrar Estudiante en Asignatura</h2>
+        <form onsubmit="return false;">
+            <select id="tipoidregasig" required>
+                <option value="">Tipo de documento</option>
+                <option value="CC">Cédula</option>
+                <option value="TI">Tarjeta de identidad</option>
+                <option value="CE">Cédula de extranjería</option>
+            </select>
+            <input id="numeroidregasig" type="text" placeholder="Número de documento" required>
+            <input id="codigoasig" type="text" placeholder="Código de asignatura" required>
+            <input id="semestre" type="text" placeholder="Semestre" required>
+            <input id="seccion" type="text" placeholder="Sección" required>
+            <button type="submit">Registrar en asignatura</button>
+        </form>
+        <div class="resultado">[Mensaje de verificación]</div>
+    </section>
+
+    <!-- CONSULTAR EN ASIGNATURA -->
+    <section class="card">
+        <h2>Consultar Estudiantes en Asignatura</h2>
+        <form onsubmit="return false;">
+            <input id="codigoasigconsulta" type="text" placeholder="Código de asignatura" required>
+            <input id="semestreconsulta" type="text" placeholder="Semestre" required>
+            <input id="seccionconsulta" type="text" placeholder="Sección" required>
+            <button type="submit">Consultar</button>
+        </form>
+        <div class="resultado">
+            <ul>
+                <li>Tipo: CC - Número: 123456789</li>
+                <li>Tipo: TI - Número: 987654321</li>
+            </ul>
+        </div>
+    </section>
+
+    <button class="btn-volver" onclick="window.location.href='index.html'">Volver al inicio</button>
+</div>
+
+<script src="Estudiantes.js"></script>
+</body>
+</html>
